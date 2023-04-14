@@ -1,14 +1,8 @@
-import React, { useContext, useEffect } from "react";
-import { Context } from "../store/appContext";
+import React from "react";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
-export const Home = () => {
-	const { store, actions } = useContext(Context);
-
-	useEffect(()=> {
-		actions.getMessage()
-	}, [store.token])
+export const Private = () => {
 
 	return (
 		<div className="text-center mt-5">
@@ -17,7 +11,7 @@ export const Home = () => {
 				<img src={rigoImageUrl} />
 			</p>
 			<div className="alert alert-info">
-				{store.message || "You must be logged in to see this msg!..."}
+				This is a private page, shhh don't tell anyone
 			</div>
 			<p>
 				This boilerplate comes with lots of documentation:{" "}
